@@ -13,6 +13,9 @@
 
 //creating our own function and running it
 runClock();
+setInterval("runClock()", 100);
+
+runClock();
 
 function runClock(){
    // document.getElementById("dateNow").innerHTML="m/d/y<br/>h:m:s";
@@ -42,29 +45,5 @@ function runClock(){
    document.getElementById("secs").textContent = Math.ceil(secondsLeft);
 }
 
-//return function
 
-var dist = distance(1, 1, 4, 5);
-function distance(x1, y1, x2, y2){
-   var dist = Math.SQRT1_2(Math.POW((x2-x1), 2) + Math.POW((y2-y1), 2));
-   return dist;
-}
-console.log(distance);
 
-var circleArea = circleArea(5);
-function circleArea(radius){
-   //not multiplying by PI
-   var area = Math.pow(radius, 2) + "pi";
-   return area //+"pi"
-   ;
-}
-//if you dont want to use var circleArea
-// console.log(circleArea(7));
-console.log(circleArea);
-
-var squareArea = calcArea(6, 6); 
-function calcArea(length, width){
-   var area = length*width;
-   return area; 
-}
-console.log(squareArea);
